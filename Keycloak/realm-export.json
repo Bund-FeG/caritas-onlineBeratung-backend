@@ -370,10 +370,10 @@
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "https://anwendung.de/*"
+        "https://<hostname>/*"
       ],
       "webOrigins": [
-        "https://anwendung.de"
+        "https://<hostname>"
       ],
       "notBefore": 0,
       "bearerOnly": false,
@@ -444,7 +444,7 @@
       "id": "88ef90c6-478e-435b-985f-ea60007b86a3",
       "clientId": "account",
       "name": "${client_account}",
-      "baseUrl": "/auth/realms/<anwendungs_realm_name>/account",
+      "baseUrl": "/auth/realms/caritas-online-beratung/account",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
@@ -454,7 +454,7 @@
         "view-profile"
       ],
       "redirectUris": [
-        "/auth/realms/<anwendungs_realm_name>/account/*"
+        "/auth/realms/caritas-online-beratung/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -701,13 +701,13 @@
       "id": "791ab8c5-a47b-4ebe-b498-2abfb772928c",
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
-      "baseUrl": "/auth/admin/<anwendungs_realm_name>/console/index.html",
+      "baseUrl": "/auth/admin/caritas-online-beratung/console/index.html",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/auth/admin/<anwendungs_realm_name>/console/*"
+        "/auth/admin/caritas-online-beratung/console/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -1147,8 +1147,8 @@
     "auth": "true",
     "port": "25",
     "host": "",
-    "from": "",
-    "fromDisplayName": "",
+    "from": "<user>@<hostname>",
+    "fromDisplayName": "Name",
     "ssl": "",
     "user": ""
   },
@@ -1426,7 +1426,7 @@
             "true"
           ],
           "usersDn": [
-            ""
+            "ou=users,ou=WebApp,dc=caritas,dc=de"
           ],
           "cachePolicy": [
             "DEFAULT"
@@ -1447,7 +1447,7 @@
             "-1"
           ],
           "bindDn": [
-            ""
+            "cn=admin,dc=caritas,dc=de"
           ],
           "usernameLDAPAttribute": [
             "uid"
